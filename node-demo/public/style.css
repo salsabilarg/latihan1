@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  color: #e0e0e0;
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+}
+
+.subtitle {
+  color: #a0a0c0;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.calculator {
+  background: #1e1e2e;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  width: 320px;
+}
+
+#layar {
+  width: 100%;
+  background: #0d0d1a;
+  color: #00e5ff;
+  font-size: 2rem;
+  text-align: right;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  letter-spacing: 2px;
+}
+
+.tombol-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tombol {
+  padding: 18px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-weight: bold;
+}
+
+.tombol:active { transform: scale(0.93); }
+
+.angka      { background: #2a2a3e; color: #e0e0e0; }
+.angka:hover { background: #3a3a5e; }
+
+.operator   { background: #1a3a5e; color: #00b4d8; }
+.operator:hover { background: #1a4a7e; }
+
+.hapus      { background: #3e1a1a; color: #ff6b6b; }
+.hapus:hover { background: #5e2a2a; }
+
+.sama-dengan { background: linear-gradient(135deg, #0077b6, #00b4d8); color: white; }
+.sama-dengan:hover { background: linear-gradient(135deg, #0096c7, #48cae4); }
+
+.nol { grid-column: span 2; }
+
+#riwayat {
+  text-align: left;
+  border-top: 1px solid #333;
+  padding-top: 12px;
+}
+
+#riwayat h3 { color: #a0a0c0; font-size: 0.85rem; margin-bottom: 8px; }
+
+#daftar-riwayat {
+  list-style: none;
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+#daftar-riwayat li {
+  color: #7070a0;
+  font-size: 0.8rem;
+  padding: 3px 0;
+  border-bottom: 1px solid #2a2a3e;
+}
